@@ -1,16 +1,14 @@
 <template>
-<div></div>
 <section class="details">
     <div class="flex-row space">
         <h3>{{ courseDetails.name }}</h3>
         <p>{{ courseDetails.description }}</p>
     </div>
     <button @click="this.$router.push('/')"></button>
-    </section>
+</section>
 </template>
 
 <script>
-
 export default {
     name: 'CourseDetails',
     data: () =>({

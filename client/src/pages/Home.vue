@@ -1,6 +1,12 @@
 <template>
+  <div class="homePageContainer">
+    <div>
+    <h1>Welcome to Student Registry!</h1>
+  </div>
   <div>
-    <h1>Home Page!</h1>
+    <img id="homePic" src="https://www.d120.org/assets/1/18/registration.jpg?5468" alt="" />
+
+  </div>
   </div>
 </template>
 
