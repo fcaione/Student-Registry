@@ -2,7 +2,7 @@
   <div class="card">
     <div class="info-wrapper flex-col">
       <h3>{{ student.name }}</h3>
-      <h4>{{ student.gpa }}</h4>
+      <h4>Grade: {{ student.StudentCourse.grade }}</h4>
     </div>
   </div>
 </template>
