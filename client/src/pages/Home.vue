@@ -8,7 +8,6 @@
       <h2>Search Results</h2>
       <section class="search-results container-grid" v-if="searched">
       <div v-for="results in searchResults" :key="results.id">
-        <GameCard @click="selectGame(results.id)" :results="results"/>
       </div>
     </section>
     </div>
@@ -32,7 +31,11 @@ export default {
         this.searchResults= res.data.results
         this.searched = true
         this.searchQuery = ''
-    }
+    },
+    handleChange(event) {
+        this[event.target.name] = event.target.value
+        console.log(event)
+      },
   }
   }
 </script>
