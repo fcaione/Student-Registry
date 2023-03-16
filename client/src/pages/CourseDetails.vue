@@ -71,12 +71,12 @@ export default {
 			this.students = res.data
 		},
         async handleSubmit() {
-            const res = await axios.post(`${BASE_URL}/studentcourses/create`, {
+            await axios.post(`${BASE_URL}/studentcourses/create`, {
                 studentId: this.formValues.studentId,
                 grade: this.formValues.grade,
                 courseId: this.$route.params.courseId
             })
-            console.log(res)
+            this.getCourse()
         },
         async handleChange(e) {
             this.formValues[e.target.id] = e.target.value
