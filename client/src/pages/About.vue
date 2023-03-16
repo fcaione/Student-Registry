@@ -3,7 +3,7 @@
 
 <div class="about-page">
 
-  <p>About page!</p>
+  <h1>About page!</h1>
 
 
 </div>
