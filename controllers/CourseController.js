@@ -19,6 +19,7 @@ const findCourseByPk = async (req, res) => {
     })
     res.status(200).send(course)
   } catch (error) {
+    console.log(error)
 		res.status(401).send(error)
   }
 }

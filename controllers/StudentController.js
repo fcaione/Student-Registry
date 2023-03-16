@@ -20,10 +20,12 @@ const createStudent = async (req, res) => {
 			...req.body,
 			userId: req.params.userId
 		}
+		console.log(studentBody)
 		const student = await Student.create(studentBody)
 		console.log(student)
 		res.status(200).send(student)
 	} catch (error) {
+		console.log(error)
 		res.status(401).send(error)
 	}
 }

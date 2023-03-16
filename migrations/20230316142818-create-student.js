@@ -9,8 +9,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       gpa: {
-        type: Sequelize.REAL
+        type: Sequelize.REAL,
+        allowNull: true
       },
       userId: {
         type: Sequelize.INTEGER,
@@ -18,7 +23,8 @@ module.exports = {
         references: {
           model: "users",
           key: "id"
-        }
+        },
+				onDelete: "CASCADE"
       },
       createdAt: {
         allowNull: false,
