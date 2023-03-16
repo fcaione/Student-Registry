@@ -1,44 +1,17 @@
 <template>
-  <div>
-    <h3>Add A Course</h3>
-    <form @submit.prevent="handleSubmit">
-      <div>
-        <label for="name">Name:</label>
-        <input id="name" v-model="name" type="text" placeholder="Enter name here" required>
-      </div>
-      <div>
-        <label for="grade">Email:</label>
-        <input id="grade" v-model="email" type="email" placeholder="Enter email here" required>
-      </div>
-      <div>
-        <label for="grade">Id:</label>
-        <input id="grade" v-model="id" type="text" placeholder="Enter grade here" required>
-      </div>
-      <div>
-        <label for="grade">Course:</label>
-        <input id="grade" v-model="course" type="text" placeholder="Enter course here" required>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+  <div class="card">
+    <div class="info-wrapper flex-col">
+      <h3>{{ student.name }}</h3>
+      <h4>{{ student.gpa }}</h4>
+      <h4>{{ student.userId }}</h4>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'StudentCard',
-    data() {
-      return {
-        name: '',
-        grade: '',
-        email: '',
-        id: '',
-        course: ''
-      }
-    },
-    methods: {
-      handleSubmit() {
-        
-      }
-    }
+    props: ['student'],
+    methods: {}
   }
 </script>
