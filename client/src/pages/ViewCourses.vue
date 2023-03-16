@@ -6,10 +6,9 @@
 
 <script>
 import axios from "axios"
-import CourseCard from '@/components/CourseCard.vue';
-import BASE_URL from '@/globals';
+import CourseCard from '@/components/CourseCard.vue'
+import BASE_URL from "@/globals"
 
-console.log(BASE_URL)
 export default {
     name: 'ViewCourses',
     components: {
@@ -23,7 +22,7 @@ export default {
         async getCourse() {
         const res = await axios.get(`${BASE_URL}/courses`)
         console.log(res)
-        this.courses=res.data.results
+        this.courses=res.data
         }
     }
 }

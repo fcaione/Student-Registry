@@ -17,7 +17,7 @@ const routes = [
   { path: '/courses', component: ViewCourses, name: 'ViewCourses' },
   { path: '/courses/add', component: AddCourse, name: 'AddCourse' },
   { path: '/signIn', component: SignIn, name: 'SignIn' },
-  { path: '/details/course', component: CourseDetails, name: 'CourseDetails' },
+  { path: '/details/:courseId', component: CourseDetails, name: 'CourseDetails' },
   { path: '/signUp', component: SignUp, name: 'SignUp' }
 ]
 
