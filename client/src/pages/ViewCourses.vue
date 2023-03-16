@@ -6,6 +6,9 @@
 
 <script>
 import CourseCard from '@/components/CourseCard.vue';
+import BASE_URL from '@/globals';
+
+console.log(BASE_URL)
 export default {
     name: 'ViewCourses',
     components: {
