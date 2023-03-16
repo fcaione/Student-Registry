@@ -25,6 +25,7 @@
 
 <script>
   export default {
+    name: 'StudentCard',
     data() {
       return {
         name: '',
