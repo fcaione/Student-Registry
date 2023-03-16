@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     gpa: {
-      type: DataTypes.REAL
+      type: DataTypes.REAL,
+      allowNull: true
     },
     userId: {
       type: DataTypes.INTEGER,
