@@ -20,19 +20,15 @@ const signIn = async (req, res) => {
           raw: true
       })
       let matched = await middleware.comparePassword(
-          user.passwordDigest,
+          user.password,
           req.body.password
       )
       if (matched) {
-          let payload = {
+          return res.send({
             id: user.id,
             email: user.email,
-            name: user.name,
-            profileImage: user.profileImage,
-            backgroundImage: user.backgroundImage
-          }
-          let token = middleware.createToken(payload)
-          return res.send({ user: payload, token })
+            name: user.name
+          })
       }
       res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
   } catch (error) {
