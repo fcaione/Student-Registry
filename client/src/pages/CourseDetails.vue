@@ -1,10 +1,34 @@
 <template>
 	<section v-if="selectedCourse" class="details">
-        <h3>{{ selectedCourse.name }}</h3>
-        <h3>{{ selectedCourse.description }}</h3>
-    </section>
+		<h3>{{ selectedCourse.name }}</h3>
+		<h3>{{ selectedCourse.description }}</h3>
+	</section>
+
+    <button @click="this.isAssigning = !this.isAssigning">Assign a Student to course</button>
+
+	<section v-if="isAssigning">
+			<form @submit="handleSubmit">
+				<select @change="handleChange" name="student" id="studentId">
+                    <option hidden>Select a student</option>
+					<option v-for="student in students" :key="student.id" :value="student.id">{{ student.name }}</option>
+				</select>
+                <select @change="handleChange" name="grade" id="grade">
+                    <option>Select a Grade</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">F</option>
+                </select>
+                <button>Submit</button>
+			</form>
+	</section>
 	<section>
-		<StudentCard v-for="student in selectedCourse.Students" :key="student.id" :student="student"/>
+		<StudentCard
+			v-for="student in selectedCourse.Students"
+			:key="student.id"
+			:student="student"
+		/>
 	</section>
 </template>
 
@@ -20,9 +44,16 @@ export default {
 	},
 	data: () => ({
 		selectedCourse: {},
+		isAssigning: true,
+        formValues: {
+            studentId: null,
+            grade: null,
+        },
+        students: []
 	}),
 	mounted() {
 		this.getCourse()
+        this.getAllStudents()
 	},
 	methods: {
 		async getCourse() {
@@ -32,6 +63,24 @@ export default {
 			console.log(res.data)
 			this.selectedCourse = res.data
 		},
+        async getAllStudents() {
+			const res = await axios.get(
+				`${BASE_URL}/students`
+			)
+			console.log(res.data)
+			this.students = res.data
+		},
+        async handleSubmit() {
+            const res = await axios.post(`${BASE_URL}/studentcourses/create`, {
+                studentId: this.formValues.studentId,
+                grade: this.formValues.grade,
+                courseId: this.$route.params.courseId
+            })
+            console.log(res)
+        },
+        async handleChange(e) {
+            this.formValues[e.target.id] = e.target.value
+        }
 	},
 }
 </script>

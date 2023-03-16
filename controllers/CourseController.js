@@ -14,7 +14,7 @@ const findCourseByPk = async (req, res) => {
     const course = await Course.findByPk(req.params.courseId, {
       include: [{
         model: Student,
-        through: { attributes: [] }
+        through: { attributes: ["grade"] }
       }]
     })
     res.status(200).send(course)
