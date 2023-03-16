@@ -1,20 +1,13 @@
 <template>
-
-  
-  
   <div class='SignInFormContainer'>
     <div>
-    
     <h1>Sign Up</h1>
-
-
 <div class="SignInForm">
   <form  @submit="handleSubmit">
     <div>
     <input placeholder="Email Address" name="email" type="email" :value="email" v-on:input="handleChange"/>
   </div>
-
-   <div>
+  <div>
     <input placeholder="Password" name="password" type="text" :value="password" v-on:input="handleChange"/>
   </div>
   </form>
@@ -24,15 +17,10 @@
 </div>
 </div>
 </div>
-
-
-
-
-
 </template>
 
 <script>
-
+import BASE_URL from "@/globals"
 export default {
     name: 'SignUp',
     data: () => ({
@@ -45,9 +33,13 @@ export default {
     },
     handleSubmit(e) {
       e.preventDefault()
+      const res = 
       this.email=''
       this.password=''
     },
+  addUser() {
+    
+  }
 }
 }
 </script>
