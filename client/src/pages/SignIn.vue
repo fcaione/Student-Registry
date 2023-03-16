@@ -8,20 +8,21 @@
 
 
 <div class="SignInForm">
-  <form  @submit="handleSubmit">
+  <form  v-on:submit="handleSubmit">
     <div>
-    <input placeholder="Email Address" name="email" type="email" :value="email" v-on:input="handleChange"/>
+      <input @input="handleChange" placeholder="Email" :value="email" name="email" type="email" />
   </div>
 
    <div>
-    <input placeholder="Password" name="password" type="text" :value="password" v-on:input="handleChange"/>
+    <input @input="handleChange" placeholder="Password" :value="password" name="password" type="password" />
   </div>
   </form>
 <div>
   <h4>If you dont have an account, Sign Up Here!</h4>
 </div>
   <div>
-  <button @click="registerAccount">Sign In!</button>
+    <button @click="handleSubmit" :disabled="!email || !password">Log In</button>
+
 </div>
 </div>
 </div>
@@ -37,15 +38,18 @@ export default {
   }),
   methods: {
     handleChange(e) {
-      this[e.target.name] = e.target.value
+      this.$emit('handleFormChange', e.target.name, e.target.value)
     },
     handleSubmit(e) {
       e.preventDefault()
-      this.email=''
-      this.password=''
+            this.$emit('handleSubmit')
+
     },
-    registerAccount(){
-      this.$router.push('/signUp')
+    registerAccount(e){
+      e.preventDefault()
+            this.$emit('handleSubmit')
+
+      // this.$router.push('/signUp')
     }
   }
 }

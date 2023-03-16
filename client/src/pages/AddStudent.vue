@@ -38,12 +38,12 @@ export default {
         this[event.target.name] = event.target.value
         console.log(event)
       },
-      async addStudent() {
-        const userId = this.$route.params.user.id
-        const res = await axios.post(`${BASE_URL}/create/${userId}`)
-        console.log(res)
-        this.courses=res.data
-        }
+      // async addStudent() {
+      //   const userId = this.$route.params.user.id
+        // const res = await axios.post(`${BASE_URL}/create/${userId}`)
+        // console.log(res)
+        // this.courses=res.data
+        // }
     }
 }
 </script>
