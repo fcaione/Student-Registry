@@ -1,27 +1,21 @@
 <template>
   <div>
-    <div class="search">
-      <form @submit="getSearchResults">
-        <input placeholder="Search Here" :value="searchQuery" name="search" type="text" v-on:input="handleChange" />
-        <button>Search</button>
-      </form>
-      <h2>Search Results</h2>
-      <section class="search-results container-grid" v-if="searched">
-      <div v-for="results in searchResults" :key="results.id">
-      </div>
-    </section>
-    </div>
+    <h1>Home Page!</h1>
   </div>
 </template>
 
+
 <script>
+
+
+
+
+
 export default {
     name: 'HomePage',
     components:{},
     data: () => ({
-      searchQuery: '',
-      searchResults: [],
-      searched: false
+      
     }),
     mounted() {},
     methods: {
