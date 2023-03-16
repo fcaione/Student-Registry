@@ -25,9 +25,9 @@ export default {
     }),
     mounted() {},
     methods: {
-      async getSearchResults(e) {
+      getSearchResults(e) {
         e.preventDefault()
-        const res = await axios.get ()
+        const res = 
         this.searchResults= res.data.results
         this.searched = true
         this.searchQuery = ''
