@@ -10,7 +10,13 @@
 <script>
   export default {
     name: 'StudentCard',
-    props: ['student'],
-    methods: {}
+    props: {
+      student:{
+        type: Object,
+        required: true
+
+      }
+     
+    }
   }
 </script>
