@@ -1,5 +1,5 @@
 <template>
-<div v-for="course in course" :key="course.id">
+<div v-for="course in courses" :key="course.id">
     <CourseCard />
 </div>
 </template>
@@ -15,6 +15,8 @@ export default {
         courses: []
     }),
     mounted(){},
-    methods: {}
+    methods: {
+
+    }
 }
 </script> 
