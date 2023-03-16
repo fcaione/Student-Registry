@@ -5,7 +5,8 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Student extends Model {
     static associate(models) {
-      Student.hasMany(models.Course, {
+      Student.belongsToMany(models.Course, {
+        through: models.StudentCourse,
         foreignKey: "studentId"
       })
       Student.belongsTo(models.User, {

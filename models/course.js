@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   class Course extends Model {
 
     static associate(models) {
-      Course.belongsTo(models.Student, {
+      Course.belongsToMany(models.Student, {
+        through: models.StudentCourse,
         foreignKey: "studentId"
       })
     }
@@ -17,16 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    studentId : {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "students",
-        key: "id"
-      }
-    },
-    grade: {
-      type: DataTypes.STRING
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     sequelize,
