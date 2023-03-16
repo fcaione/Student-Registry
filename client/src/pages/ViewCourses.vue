@@ -1,6 +1,6 @@
 <template>
     <div >
-        <CourseCard v-for="course in courses" :key="course.id" :course="course"/>
+        <CourseCard v-for="course in courses" :key="course.id" :course="course" @click="this.$router.push(`/details/${course.id}`)"/>
     </div>
     </template>
     

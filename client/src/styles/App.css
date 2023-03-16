@@ -45,14 +45,6 @@ main {
   padding: 2em 0;
 }
 
-/* form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
 input {
   width: 80%;
   margin: 0 1em;
