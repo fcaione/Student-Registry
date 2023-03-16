@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
       references: {
         model: "students",
         key: "id"
-      }
+      },
+				onDelete: "CASCADE"
     },
     courseId: {
       type: DataTypes.INTEGER,
@@ -28,7 +29,8 @@ module.exports = (sequelize, DataTypes) => {
       references: {
         model: "courses",
         key: "id"
-      }
+      },
+				onDelete: "CASCADE"
     },
     grade: {
       type: DataTypes.STRING,
@@ -37,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'StudentCourse',
-    tableName: "studentscourses"
+    tableName: "studentcourses"
   });
   return StudentCourse;
 };
