@@ -9,6 +9,9 @@ header {
 header nav a {
   margin: 0 1em;
 }
+header nav :hover{
+  color: lightblue
+}
 
 input {
   background-color: transparent;
