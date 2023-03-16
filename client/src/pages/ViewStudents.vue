@@ -1,10 +1,10 @@
 <template>
-  <div >
-      <StudentCard v-for="student in students" :key="student.id" :student="student"/>
-  </div>
-  </template>
-  
-  <script>
+<div >
+    <StudentCard v-for="student in students" :key="student.id" :student="student"/>
+</div>
+</template>
+
+<script>
   import axios from "axios"
   import StudentCard from '@/components/StudentCard.vue'
   import BASE_URL from "@/globals"
