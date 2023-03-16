@@ -17,7 +17,6 @@ const assignStudent = async (req, res) => {
 			courseId: parseInt(courseId),
 			grade: (grade),
 		})
-    console.log(studentCourse)
 		res.status(200).send(studentCourse)
 	} catch (error) {
 		res.status(401).send(error)
