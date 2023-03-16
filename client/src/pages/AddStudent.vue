@@ -26,6 +26,22 @@
 <script>
 
 export default {
-    name: 'AddStudent'
+    name: 'AddStudent',
+    data() {
+      return {
+        name: '',
+        email: '',
+        id: '',
+        course: ''
+
+      }
+    },
+    methods: {
+      handleSubmit(
+        
+      ) {
+        
+      }
+    }
 }
 </script>
