@@ -24,7 +24,7 @@ const signIn = async (req, res) => {
           req.body.password
       )
       if (matched) {
-          return res.send({
+          return res.status(200).send({
             id: user.id,
             email: user.email,
             name: user.name

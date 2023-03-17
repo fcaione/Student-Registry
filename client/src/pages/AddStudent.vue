@@ -34,7 +34,7 @@ export default {
 	}),
 	methods: {
 		async handleSubmit() {
-			const res = await axios.post(`${BASE_URL}/students/create/1`, {
+			const res = await axios.post(`${BASE_URL}/students/create/${localStorage.getItem("userId")}`, {
 				name: this.name,
 			})
 			console.log(res)
