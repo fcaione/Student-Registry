@@ -5,7 +5,7 @@ const findAllStudents = async (req, res) => {
 		const students = await Student.findAll({
 			include: [{
         model: Course,
-        through: { attributes: []}
+        through: { attributes: ["grade"]}
       }],
 		})
 		res.status(200).send(students)
