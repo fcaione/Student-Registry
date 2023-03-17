@@ -1,13 +1,7 @@
 <template>
   <div class="homePageContainer">
-    <div>
-    <h1>Welcome to Student Registry!</h1>
-    <!-- <h1>Welcome to Student Registry, {{ user.name }}!</h1> -->
-
-  </div>
   <div>
-    <img id="homePic" src="https://www.d120.org/assets/1/18/registration.jpg?5468" alt="" />
-
+    <img id="homePic" src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHN0dWRlbnRzJTIwaW4lMjBjbGFzc3Jvb218ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" alt="" />
   </div>
   </div>
 </template>

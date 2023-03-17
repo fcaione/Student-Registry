@@ -30,7 +30,23 @@ const createStudent = async (req, res) => {
 	}
 }
 
+const findStudentByPk = async (req, res) => {
+  try {
+    const student = await Student.findByPk(req.params.studentId, {
+      include: [{
+        model: Course,
+        through: { attributes: ["grade"] }
+      }]
+    })
+    res.status(200).send(student)
+  } catch (error) {
+    console.log(error)
+		res.status(401).send(error)
+  }
+}
+
 module.exports = {
 	findAllStudents,
 	createStudent,
+	findStudentByPk
 }
