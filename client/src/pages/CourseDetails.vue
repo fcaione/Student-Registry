@@ -5,11 +5,11 @@
 			<h3>{{ selectedCourse.description }}</h3>
 		</section>
 
-		<button @click="this.isAssigning = !this.isAssigning">
+		<button v-if="user" @click="this.isAssigning = !this.isAssigning">
 			Assign a student to course
 		</button>
 
-		<section v-if="isAssigning" class="text-center">
+		<section v-if="isAssigning && user" class="text-center">
 			<form @submit="handleSubmit" class="flex-col">
 				<select @change="handleChange" name="student" id="studentId">
 					<option hidden>Select a student</option>
@@ -53,9 +53,10 @@ export default {
 	components: {
 		StudentCard,
 	},
+    props: ["user"],
 	data: () => ({
 		selectedCourse: {},
-		isAssigning: true,
+		isAssigning: false,
 		formValues: {
 			studentId: null,
 			grade: null,
