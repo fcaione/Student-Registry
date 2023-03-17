@@ -12,7 +12,7 @@
   </div>
   </form>
   <div>
-  <button>Sign Up!</button>
+  <button @click="this.$router.push('/signIn')">Sign Up!</button>
 </div>
 </div>
 </div>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import BASE_URL from "@/globals"
 export default {
     name: 'SignUp',
@@ -31,15 +32,13 @@ export default {
     handleChange(e) {
       this[e.target.name] = e.target.value
     },
-    handleSubmit(e) {
+    async handleSubmit(e) {
       e.preventDefault()
-      const res = 
-      this.email=''
-      this.password=''
+      const res = await axios.post(`${BASE_URL}/users/create`, {
+      email: this.email,
+      password: this.password
+    })
     },
-  addUser() {
-    
-  }
 }
 }
 </script>
