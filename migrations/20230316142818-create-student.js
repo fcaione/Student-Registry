@@ -13,8 +13,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      gpa: {
-        type: Sequelize.REAL,
+      email: {
+        type: Sequelize.STRING,
         allowNull: true
       },
       userId: {

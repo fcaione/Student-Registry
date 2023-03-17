@@ -14,11 +14,11 @@
 				</select>
                 <select @change="handleChange" name="grade" id="grade">
                     <option>Select a Grade</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="E">F</option>
+                    <option value="4">A</option>
+                    <option value="3">B</option>
+                    <option value="2">C</option>
+                    <option value="1">D</option>
+                    <option value="0">F</option>
                 </select>
                 <button>Submit</button>
 			</form>
