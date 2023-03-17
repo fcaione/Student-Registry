@@ -1,6 +1,7 @@
 <template>
-<div >
-    <StudentCard v-for="student in students" :key="student.id" :student="student"/>
+    <h1 class="text-center">Students</h1>
+<div class="flex-row">
+    <StudentCard v-for="student in students" :key="student.id" :student="student" active="true"/>
 </div>
 </template>
 
