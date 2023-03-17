@@ -168,3 +168,22 @@ select {
 .green {
   color:aquamarine;
 }
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.aboutPic {
+  height: 300px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+
+#aboutFont{
+font-weight: bold;
+margin: 50px;
+}
