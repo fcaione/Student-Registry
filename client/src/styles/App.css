@@ -107,7 +107,7 @@ button {
 }
 
 #homePic {
-  min-height: 100%;
+  height: 500px;
   min-width: 100%;
   object-fit: cover;
   object-position: center;
@@ -115,7 +115,16 @@ button {
 
 .homePicContainer {
   width: 100%;
-  height: 400px;
+  height: 500px;
+}
+
+.homeText {
+  position: absolute;
+  top: 10rem;
+  left: 30%;
+  text-shadow: 2px 2px green;
+  color: white;
+  font-size: 2.5rem;
 }
 
 .SignInForm {
@@ -175,4 +184,22 @@ select {
 
 .homeImage {
   margin: 0;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.aboutPic {
+  height: 300px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+#aboutFont{
+font-weight: bold;
+margin: 50px;
 }

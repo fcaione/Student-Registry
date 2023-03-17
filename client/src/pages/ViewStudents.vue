@@ -1,7 +1,7 @@
 <template>
     <h1 class="text-center">Students</h1>
 <div class="flex-row">
-    <StudentCard v-for="student in students" :key="student.id" :student="student" active="true"/>
+    <StudentCard v-for="student in students" :key="student.id" :student="student" active="true" @click="this.$router.push(`/students/${student.id}`)"/>
 </div>
 </template>
 

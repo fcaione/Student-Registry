@@ -8,6 +8,8 @@
     <router-link to="/courses/add">Add Courses</router-link>
     <router-link to="/courses">Courses</router-link>
     <router-link to="/about">About</router-link>
+    <router-link to="/students/:studentId">Student Dets</router-link>
+
   </nav>
 </template>
 

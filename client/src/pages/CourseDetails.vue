@@ -37,6 +37,7 @@
 				v-for="student in selectedCourse.Students"
 				:key="student.id"
 				:student="student"
+				@click="this.$router.push(`/students/${student.id}`)"
 			/>
 		</section>
 	</div>
