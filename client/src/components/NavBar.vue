@@ -7,7 +7,6 @@
     <router-link to="/students/add">Add Students</router-link>
     <router-link to="/courses/add">Add Courses</router-link>
     <router-link to="/courses">Courses</router-link>
-    <router-link to="/details/course">Course Details</router-link>
     <router-link to="/about">About</router-link>
   </nav>
 </template>
