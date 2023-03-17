@@ -39,12 +39,15 @@ export default {
     },
     handleSubmit(e) {
       e.preventDefault()
-      this.email=''
-      this.password=''
-    },
-    registerAccount(){
-      this.$router.push('/signUp')
-    }
-  }
+			const res = await axios.post(`${BASE_URL}/users/login`, {
+        email: this.email,
+        password: this.password
+      })
+      localStorage.setItem("userId", res.data.id)
+		},
+		handleChange(event) {
+			this[event.target.name] = event.target.value
+		},
+	},
 }
 </script>
