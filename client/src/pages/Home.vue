@@ -4,7 +4,6 @@
     <img id="homePic" :src="image" alt="" />
     <h1 class="homeText">Welcome to the student registry!</h1>
   </div>
-
   </div>
 </template>
 
