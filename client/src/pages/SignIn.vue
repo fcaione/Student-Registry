@@ -45,9 +45,11 @@ methods: {
     e.preventDefault()
     const res = await axios.post(`${BASE_URL}/users/login`, {
       email: this.email,
-      password: this.password
+      password: this.password,
+      
     })
     localStorage.setItem("userId", res.data.id)
+    this.$router.push('/')
   },
   handleChange(event) {
     this[event.target.name] = event.target.value
