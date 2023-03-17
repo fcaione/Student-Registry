@@ -1,7 +1,10 @@
 <template>
+    <div class="flex-col">
     <h1 class="text-center">Courses</h1>
     <div class="flex-row">
         <CourseCard v-for="course in courses" :key="course.id" :course="course" @click="this.$router.push(`/details/${course.id}`)"/>
+    </div>
+        <button class="viewButton" @click="this.$router.push('/courses/add')">Add Course</button>
     </div>
     </template>
     

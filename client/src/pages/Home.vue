@@ -4,6 +4,10 @@
     <img id="homePic" :src="image" alt="" />
     <h1 class="homeText">Welcome to the student registry!</h1>
   </div>
+  <div class="homeButtonContainer">
+    <button class="homeButton" @click="this.$router.push('/students')">Students</button>
+    <button class="homeButton" @click="this.$router.push('/courses')">Courses</button>
+  </div>
   </div>
 </template>
 

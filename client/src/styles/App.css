@@ -23,12 +23,12 @@ input {
   transition: all 0.2s;
   font-size: 1.3rem;
   color: #eee;
+  font-family: inherit;
 }
 
 input:active,
 input:focus {
   outline: none;
-
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -50,13 +50,21 @@ button {
   cursor: pointer;
   background-color: rgb(13, 88, 23);
   color: #eee;
+  font-family: inherit;
+}
+
+button:hover, a:active {
+  background-color: rgb(33, 116, 48);
+}
+header a:active{
+  background-color: transparent;
 }
 
 .card {
   width: 250px;
   height: 250px;
   border-radius: 4px;
-  background-color: #1b1b1b;
+  background-color: #053406;
   cursor: pointer;
   transition: all 0.2s;
   margin: 1rem;
@@ -64,6 +72,7 @@ button {
 
 .card:hover {
   opacity: 0.8;
+
 }
 
 .card .info-wrapper {
@@ -85,6 +94,9 @@ button {
 
 .flex-row {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-col {
@@ -156,11 +168,12 @@ label {
 
 h4 a:visited {
   color: green;
+  text-decoration: underline;
 }
 
 a:visited {
   color: rgba(17, 66, 20, 0.827);
- }
+}
 
 .text-center {
   text-align: center;
@@ -180,6 +193,9 @@ select {
 
 .green {
   color:aquamarine;
+}
+.Darkgreen {
+  color:rgba(8, 71, 27, 0.747);
 }
 
 .homeImage {
@@ -202,4 +218,26 @@ select {
 #aboutFont{
 font-weight: bold;
 margin: 50px;
+}
+
+
+.homeButton {
+  height: 100px;
+  width: 25%;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.homeButtonContainer {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.viewButton {
+  height: 100px;
+  width: 15%;
+}
+
+.viewButtonContainer {
+  width: 100%;
 }
