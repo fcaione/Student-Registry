@@ -50,6 +50,7 @@ methods: {
     })
     localStorage.setItem("userId", res.data.id)
     this.$router.push('/')
+    this.$emit("setUser")
   },
   handleChange(event) {
     this[event.target.name] = event.target.value

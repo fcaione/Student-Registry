@@ -4,7 +4,7 @@
 			<NavBar :user="user" />
 		</header>
 		<main>
-			<router-view :user="user"></router-view>
+			<router-view :user="user" @setUser="setUser"></router-view>
 		</main>
 	</div>
 </template>
@@ -29,6 +29,9 @@ export default {
 				this.user = true
 			}
 		},
+    setUser() {
+      this.user = true
+    }
 	},
 }
 </script>
