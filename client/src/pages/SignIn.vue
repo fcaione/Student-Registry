@@ -22,7 +22,7 @@
         <button type="submit" :disabled="!email || !password">Log In</button>
       </form>
       <div>
-        <h4>If you dont have an account, <a href="/signUp">Sign Up Here!</a></h4>
+        <h4>If you don't have an account, <a href="/signUp">Sign Up Here!</a></h4>
         
       </div>
       <div></div>

@@ -21,7 +21,7 @@
         mounted(){this.getCourse()},
         methods: {
             async getCourse() {
-            const res = await axios.get(`${BASE_URL}/courses`)
+            const res = await axios.get(`${BASE_URL}/courses/`)
             console.log(res)
             this.courses=res.data
             }
