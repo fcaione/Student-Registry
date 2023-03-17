@@ -3,7 +3,7 @@
   <div class='SignInFormContainer'>
   <div>
 
-  <h3>Add A Course</h3>
+  <h1>Add A Course</h1>
 
   <div class="SignInForm">
 				<form @submit.prevent="handleSubmit">
@@ -58,6 +58,7 @@ import BASE_URL from '@/globals'
 			})
 			console.log(res)
 			this.courses = res.data
+			this.$router.push('/courses')
 		},
 		handleChange(event) {
 			this[event.target.name] = event.target.value
