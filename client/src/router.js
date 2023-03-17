@@ -8,6 +8,7 @@ import AddCourse from './pages/AddCourse'
 import SignIn from './pages/SignIn'
 import CourseDetails from './pages/CourseDetails'
 import SignUp from './pages/SignUp'
+import StudentDetails from './pages/StudentDetails'
 
 const routes = [
   { path: '/', component: HomePage, name: 'HomePage' },
@@ -17,8 +18,17 @@ const routes = [
   { path: '/courses', component: ViewCourses, name: 'ViewCourses' },
   { path: '/courses/add', component: AddCourse, name: 'AddCourse' },
   { path: '/signIn', component: SignIn, name: 'SignIn' },
-  { path: '/details/:courseId', component: CourseDetails, name: 'CourseDetails' },
-  { path: '/signUp', component: SignUp, name: 'SignUp' }
+  {
+    path: '/details/:courseId',
+    component: CourseDetails,
+    name: 'CourseDetails'
+  },
+  { path: '/signUp', component: SignUp, name: 'SignUp' },
+  {
+    path: '/students/:studentId',
+    component: StudentDetails,
+    name: 'StudentDetails'
+  }
 ]
 
 const router = createRouter({
