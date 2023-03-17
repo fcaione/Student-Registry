@@ -1,6 +1,6 @@
 <template>
 <div class="about-page">
-  <h1>Welcome to the about page for our student registry!</h1>
+  <h1>Welcome to the about page for our <span class="Darkgreen">Student Registry!</span></h1>
 
   <h3 id="aboutFont">
 Our student registry is a comprehensive system designed to manage and maintain records of students who have enrolled in educational programs. Our goal is to provide an efficient and reliable service that supports the academic journey of our students.

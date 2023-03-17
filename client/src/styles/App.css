@@ -28,7 +28,6 @@ input {
 input:active,
 input:focus {
   outline: none;
-
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -56,11 +55,18 @@ button {
   color: #eee;
 }
 
+button:hover, a:active {
+  background-color: rgb(33, 116, 48);
+}
+header a:active{
+  background-color: transparent;
+}
+
 .card {
   width: 250px;
   height: 250px;
   border-radius: 4px;
-  background-color: #1b1b1b;
+  background-color: #053406;
   cursor: pointer;
   transition: all 0.2s;
   margin: 1rem;
@@ -68,6 +74,7 @@ button {
 
 .card:hover {
   opacity: 0.8;
+
 }
 
 .card .info-wrapper {
@@ -143,11 +150,12 @@ label {
 
 h4 a:visited {
   color: green;
+  text-decoration: underline;
 }
 
 a:visited {
   color: rgba(17, 66, 20, 0.827);
- }
+}
 
 .text-center {
   text-align: center;
@@ -167,6 +175,9 @@ select {
 
 .green {
   color:aquamarine;
+}
+.Darkgreen {
+  color:rgba(8, 71, 27, 0.747);
 }
 
 .about-page {
