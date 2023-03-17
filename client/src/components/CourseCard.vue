@@ -10,7 +10,7 @@
 <script>
   export default {
     name: 'CourseCard',
-    props: ['name', 'description'],
+    props: ['course'],
     methods: {}
   }
 </script>
