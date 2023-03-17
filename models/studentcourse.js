@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
 				onDelete: "CASCADE"
     },
     grade: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   }, {

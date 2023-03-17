@@ -19,9 +19,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    gpa: {
-      type: DataTypes.REAL,
-      allowNull: true
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     userId: {
       type: DataTypes.INTEGER,
