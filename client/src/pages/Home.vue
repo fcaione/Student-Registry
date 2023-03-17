@@ -2,6 +2,8 @@
   <div class="homePageContainer">
     <div>
     <h1>Welcome to Student Registry!</h1>
+    <!-- <h1>Welcome to Student Registry, {{ user.name }}!</h1> -->
+
   </div>
   <div>
     <img id="homePic" src="https://www.d120.org/assets/1/18/registration.jpg?5468" alt="" />
@@ -17,7 +19,9 @@ export default {
     data: () => ({
       
     }),
-    mounted() {},
+    mounted() {
+      // this.user = this.$store.state.user
+    },
     methods: {
       getSearchResults(e) {
         e.preventDefault()
