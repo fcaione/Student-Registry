@@ -4,7 +4,7 @@
 			<h1>{{ selectedStudent.name }}</h1>
       <h2>{{ selectedStudent.email }}</h2>
       <section>
-        <CourseCard v-for="course in selectedStudent.Courses" :key="course.id" :course="course" :grade="course.StudentCourse.grade"/>
+        <CourseCard v-for="course in selectedStudent.Courses" :key="course.id" :course="course" :grade="course.StudentCourse.grade" @click="this.$router.push(`/details/${course.id}`)"/>
       </section>
     </section>
 	</div>

@@ -1,21 +1,34 @@
 <template>
-  <div id="app">
-    <header>
-      <NavBar />
-    </header>
-    <main>
-      <router-view></router-view>
-    </main>
-  </div>
+	<div id="app">
+		<header>
+			<NavBar :user="user" />
+		</header>
+		<main>
+			<router-view :user="user"></router-view>
+		</main>
+	</div>
 </template>
 
 <script>
-  import NavBar from './components/NavBar.vue'
+import NavBar from "./components/NavBar.vue"
 
-  export default {
-    name: 'App',
-    components: {
-      NavBar
-    }
-  }
+export default {
+	name: "App",
+	components: {
+		NavBar,
+	},
+	data: () => ({
+		user: false,
+	}),
+	mounted() {
+		this.getUser()
+	},
+	methods: {
+		getUser() {
+			if (localStorage.getItem("userId")) {
+				this.user = true
+			}
+		},
+	},
+}
 </script>

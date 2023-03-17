@@ -38,7 +38,6 @@
         if (res) {
           this.gpa = (res / this.courses?.length).toFixed(2)
         }
-        console.log(this.gpa)
       }
     }
   }
