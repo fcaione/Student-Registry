@@ -1,54 +1,57 @@
 <template>
-<div>
-  
-  
-  <div class='SignInFormContainer'>
-  <h1>Sign In</h1>
-
-
-
-<div class="SignInForm">
-  <form  v-on:submit="handleSubmit">
-    <div>
-      <input @input="handleChange" placeholder="Email" :value="email" name="email" type="email" />
-  </div>
-   <div>
-    <input @input="handleChange" placeholder="Password" :value="password" name="password" type="password" />
-  </div>
-  <button @click="handleSubmit" :disabled="!email || !password">Log In</button>
-  </form>
-<div>
-</div>
-  <div>
-
-</div>
-</div>
-</div>
-</div>
+		<div class="SignInFormContainer">
+			<h1>Sign In</h1>
+			<div class="SignInForm">
+				<form @submit="handleSubmit">
+					<label for="email">Email</label>
+					<input
+						@input="handleChange"
+						placeholder="Email"
+						:value="email"
+						name="email"
+						type="email"
+					/>
+					<label for="password">Password</label>
+					<input
+						@input="handleChange"
+						placeholder="Password"
+						:value="password"
+						name="password"
+						type="password"
+					/>
+					<button type="submit" :disabled="!email || !password">Log In</button>
+				</form>
+				<div>
+					<h4>If you dont have an account, Sign Up Here!</h4>
+				</div>
+				<div></div>
+			</div>
+		</div>
 </template>
 
 <script>
+import axios from 'axios'
+import BASE_URL from '@/globals'
+
 export default {
-  name: "SignIn",
-  props: {
-    email: String,
-    password: String
-  },
-  methods: {
-    handleChange(e) {
-      this.$emit('handleFormChange', e.target.name, e.target.value)
-    },
-    handleSubmit(e) {
+	name: "SignIn",
+	data: () => ({
+    email: "",
+		password: ""
+  }),
+	methods: {
+    async handleSubmit(e) {
       e.preventDefault()
-         this.$emit('handleSubmit')
-
-    }
-    // registerAccount(e){
-    //   e.preventDefault()
-    //         this.$emit('handleSubmit')
-
-    //   // this.$router.push('/signUp')
-    // }
-  }
+			const res = await axios.post(`${BASE_URL}/users/login`, {
+        email: this.email,
+        password: this.password
+      })
+      localStorage.setItem("userId", res.data.id)
+			// console.log(res)
+		},
+		handleChange(event) {
+			this[event.target.name] = event.target.value
+		},
+	},
 }
 </script>
