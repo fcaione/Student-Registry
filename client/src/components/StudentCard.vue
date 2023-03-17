@@ -3,7 +3,7 @@
     <div class="info-wrapper flex-col">
       <h3>{{ student.name }}</h3>
       <h4 v-if="student.StudentCourse?.grade">Grade: {{ student.StudentCourse.grade }}</h4>
-      <h4>GPA: {{ GPA }}</h4>
+      <!-- <h4>GPA: {{ gpa }}</h4> -->
     </div>
   </div>
 </template>
@@ -12,9 +12,10 @@
   export default {
     name: 'StudentCard',
     data: () => ({
-      GPA: 5
+      gpa: null,
+      courses: []
     }),
-    mounted(){this.calculateGpa},
+    mounted(){this.calculateGpa()},
     props: {
       student: {
         type: Object,
@@ -23,7 +24,10 @@
     },
     methods: {
       calculateGpa() {
-        console.log(this.student)
+        this.courses = this.student.Courses
+        console.log(this.courses)
+        this.gpa = this.courses.reduce((a, b) => (a.StudentCourse.grade + b.StudentCourse.grade));
+        console.log(this.gpa)
       }
     }
   }
