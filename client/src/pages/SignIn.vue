@@ -20,8 +20,8 @@
 </div>
 
 <div>
-  <h4>If you dont have an account, Sign Up Here!</h4>
-  
+  <h4>If you don't have an account, Sign Up Here!</h4>
+
 </div>
 </div>
 </template>
