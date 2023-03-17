@@ -14,9 +14,7 @@
       student:{
         type: Object,
         required: true
-
       }
-     
     }
   }
 </script>
