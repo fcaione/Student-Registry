@@ -19,7 +19,6 @@
       student: {
         type: Object,
         required: true
-
       },
     },
     methods: {
