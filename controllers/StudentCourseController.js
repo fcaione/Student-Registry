@@ -1,4 +1,4 @@
-const { StudentCourse } = require("../models")
+const { StudentCourse, Course} = require("../models")
 
 const findAllStudentCourses = async (req, res) => {
 	try {
