@@ -10,9 +10,6 @@
         @click="this.$router.push(`/students/${student.id}`)"
       />
     </div>
-    <button class="viewButton" @click="this.$router.push('/students/add')">
-      Add Student!
-    </button>
   </div>
 </template>
 

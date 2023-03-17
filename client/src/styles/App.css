@@ -223,14 +223,13 @@ margin: 50px;
 
 .homeButton {
   height: 100px;
-  width: 25%;
-  justify-content: space-around;
+  width: 35%;
   margin: 5px;
 }
 
 .homeButtonContainer {
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .viewButton {
