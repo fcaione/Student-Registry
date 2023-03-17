@@ -1,5 +1,5 @@
 header {
-  background-color: #212121;
+  background-color: #8a9167;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -10,13 +10,13 @@ header nav a {
   margin: 0 1em;
 }
 header nav :hover{
-  color: lightblue
+  color: rgb(51, 181, 77)
 }
 
 input {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(14, 80, 18, 0.1);
   padding: 0.5em 0.2em;
   width: auto;
   transition: all 0.2s;
@@ -56,7 +56,8 @@ button {
   border-radius: 4px;
   font-size: 1.1rem;
   cursor: pointer;
-  background-color: lightblue;
+  background-color: rgb(13, 88, 23);
+  color: #eee;
 }
 
 .card {
@@ -153,6 +154,7 @@ button {
   display: flex;
   justify-content: center;
   border-radius: 10%;
+  background-color:#8a9167
 }
 
 .SignInFormContainer {
@@ -166,4 +168,11 @@ button {
 label {
   font-weight: bold;
   font-size: large;
+}
+h4 a:visited {
+  color: green;
+}
+
+a:visited {
+  color: rgba(17, 66, 20, 0.827);
 }
