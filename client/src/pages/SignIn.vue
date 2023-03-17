@@ -47,7 +47,6 @@ export default {
         password: this.password
       })
       localStorage.setItem("userId", res.data.id)
-			// console.log(res)
 		},
 		handleChange(event) {
 			this[event.target.name] = event.target.value
