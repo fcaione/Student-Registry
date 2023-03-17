@@ -8,11 +8,14 @@
     <input placeholder="Email Address" name="email" type="email" :value="email" v-on:input="handleChange"/>
   </div>
   <div>
-    <input placeholder="Password" name="password" type="text" :value="password" v-on:input="handleChange"/>
+    <input placeholder="Name" name="name" type="name" :value="name" v-on:input="handleChange"/>
   </div>
+  <div>
+    <input placeholder="Password" name="password" type="password" :value="password" v-on:input="handleChange"/>
+  </div>
+  <button type="submit" >Sign Up!</button>
   </form>
   <div>
-  <button @click="this.$router.push('/signIn')">Sign Up!</button>
 </div>
 </div>
 </div>
@@ -26,6 +29,7 @@ export default {
     name: 'SignUp',
     data: () => ({
     email: '',
+    name: '',
     password: ''
   }),
   methods: {
@@ -34,10 +38,12 @@ export default {
     },
     async handleSubmit(e) {
       e.preventDefault()
-      const res = await axios.post(`${BASE_URL}/users/create`, {
+      await axios.post(`${BASE_URL}/users/create`, {
       email: this.email,
+      name: this.name,
       password: this.password
     })
+    // this.$router.push('/signIn')
     },
 }
 }
