@@ -14,8 +14,8 @@
 						:value="name"
 						required
 					/>
-					<!-- <label for="email">Email:</label>
-        <input id="email" v-model="email" type="email" placeholder="Enter email address" required> -->
+					<label for="email">Email:</label>
+        <input id="email" v-model="email" type="email" placeholder="Enter email address" required>
 					<button type="submit">Submit</button>
 				</form>
 			</div>
@@ -30,12 +30,13 @@ export default {
 	name: "AddStudent",
 	data: () => ({
 		name: "",
-		// email: '',
+		email: '',
 	}),
 	methods: {
 		async handleSubmit() {
 			const res = await axios.post(`${BASE_URL}/students/create/${localStorage.getItem("userId")}`, {
 				name: this.name,
+        email: this.email
 			})
 			console.log(res)
 			this.courses = res.data
